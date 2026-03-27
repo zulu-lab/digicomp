@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sulle competenze digitali di base</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2E86C1;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 1rem;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .question {
+            background-color: white;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .question p {
+            margin: 0 0 0.5rem 0;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .submit-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: #2E86C1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz sulle competenze digitali di base</h1>
+        <p>50 domande a risposta multipla. Seleziona una risposta per ciascuna domanda e premi "Calcola punteggio" per verificare le tue competenze digitali.</p>
+    </header>
+    <main>
+        <form id="quizForm">
+            <!-- Domande statiche del quiz -->
+<div class="question">
+  <p><strong>1. Quando cerchi informazioni online, quale tra le seguenti pratiche aiuta a valutare l'affidabilità di una fonte?</strong></p>
+  <label><input type="radio" name="q0" data-correct="true"> Verificare l'autore e confrontare le informazioni con altre fonti</label><br>
+  <label><input type="radio" name="q0" data-correct="false"> Scegliere sempre il primo risultato senza controlli</label><br>
+  <label><input type="radio" name="q0" data-correct="false"> Consultare l'oroscopo del computer per decidere</label><br>
+</div>
+
+<div class="question">
+  <p><strong>2. Per archiviare e recuperare documenti sul computer, è utile...</strong></p>
+  <label><input type="radio" name="q1" data-correct="true"> Organizzare i file in cartelle con nomi chiari</label><br>
+  <label><input type="radio" name="q1" data-correct="false"> Eliminare i documenti dopo averli letti</label><br>
+  <label><input type="radio" name="q1" data-correct="false"> Tenere i file in un cassetto fisico accanto al monitor</label><br>
+</div>
+
+<div class="question">
+  <p><strong>3. Cosa significa 'filtrare' i risultati di una ricerca online?</strong></p>
+  <label><input type="radio" name="q2" data-correct="true"> Applicare criteri per restringere i risultati</label><br>
+  <label><input type="radio" name="q2" data-correct="false"> Spegnere il computer per raffreddarlo</label><br>
+  <label><input type="radio" name="q2" data-correct="false"> Misurare la velocità del Wi-Fi con un colino da cucina</label><br>
+</div>
+
+<div class="question">
+  <p><strong>4. Per riconoscere una fake news, è consigliabile...</strong></p>
+  <label><input type="radio" name="q3" data-correct="true"> Verificare la fonte, la data e confrontare con più fonti</label><br>
+  <label><input type="radio" name="q3" data-correct="false"> Condividere immediatamente se il titolo è sorprendente</label><br>
+  <label><input type="radio" name="q3" data-correct="false"> Controllare se la pagina cambia colore a seconda dell'umore</label><br>
+</div>
+
+<div class="question">
+  <p><strong>5. Quando memorizzi dati sensibili su un servizio online, cosa dovresti fare?</strong></p>
+  <label><input type="radio" name="q4" data-correct="true"> Impostare una password forte e attivare l'autenticazione a due fattori</label><br>
+  <label><input type="radio" name="q4" data-correct="false"> Usare la stessa password semplice per tutto</label><br>
+  <label><input type="radio" name="q4" data-correct="false"> Scrivere la password sullo schermo con un pennarello digitale</label><br>
+</div>
+
+<div class="question">
+  <p><strong>6. Che cos'è un motore di ricerca?</strong></p>
+  <label><input type="radio" name="q5" data-correct="true"> Un servizio che permette di trovare informazioni su Internet</label><br>
+  <label><input type="radio" name="q5" data-correct="false"> Un dispositivo che stampa i biglietti del treno</label><br>
+  <label><input type="radio" name="q5" data-correct="false"> Un piccolo animale virtuale che vive nella tastiera</label><br>
+</div>
+
+<div class="question">
+  <p><strong>7. Perché è importante salvare regolarmente il proprio lavoro mentre si scrive un documento?</strong></p>
+  <label><input type="radio" name="q6" data-correct="true"> Per evitare di perdere dati in caso di errore o interruzione</label><br>
+  <label><input type="radio" name="q6" data-correct="false"> Perché il computer potrebbe diventare geloso</label><br>
+  <label><input type="radio" name="q6" data-correct="false"> Per far crescere le piante sullo schermo</label><br>
+</div>
+
+<div class="question">
+  <p><strong>8. Cosa indica l'estensione di un file (es. .doc, .jpg)?</strong></p>
+  <label><input type="radio" name="q7" data-correct="true"> Il tipo di contenuto e il programma adatto per aprirlo</label><br>
+  <label><input type="radio" name="q7" data-correct="false"> La dimensione fisica del monitor</label><br>
+  <label><input type="radio" name="q7" data-correct="false"> La durata di vita del computer in anni digitali</label><br>
+</div>
+
+<div class="question">
+  <p><strong>9. Qual è l'utilità di un 'segnalibro' nel browser?</strong></p>
+  <label><input type="radio" name="q8" data-correct="true"> Salvare e accedere rapidamente a un sito web preferito</label><br>
+  <label><input type="radio" name="q8" data-correct="false"> Cambiare il colore della tastiera</label><br>
+  <label><input type="radio" name="q8" data-correct="false"> Tenere fermo il monitor come un fermacarte</label><br>
+</div>
+
+<div class="question">
+  <p><strong>10. Che cos'è il cloud computing?</strong></p>
+  <label><input type="radio" name="q9" data-correct="true"> Un servizio che permette di archiviare e accedere ai dati tramite Internet</label><br>
+  <label><input type="radio" name="q9" data-correct="false"> Un programma per creare nuvole sullo schermo</label><br>
+  <label><input type="radio" name="q9" data-correct="false"> Un maglione per tenere al caldo i bit</label><br>
+</div>
+
+<div class="question">
+  <p><strong>11. Qual è un esempio di netiquette?</strong></p>
+  <label><input type="radio" name="q10" data-correct="true"> Rispondere con cortesia e rispetto nei messaggi online</label><br>
+  <label><input type="radio" name="q10" data-correct="false"> Scrivere tutto in maiuscolo per essere più visibile</label><br>
+  <label><input type="radio" name="q10" data-correct="false"> Inviare una cartolina cartacea al tuo mouse</label><br>
+</div>
+
+<div class="question">
+  <p><strong>12. Per collaborare online su un documento con altre persone, quale strumento è più adatto?</strong></p>
+  <label><input type="radio" name="q11" data-correct="true"> Un editor di documenti condiviso (es. Google Docs)</label><br>
+  <label><input type="radio" name="q11" data-correct="false"> Una lavagna magnetica in cucina</label><br>
+  <label><input type="radio" name="q11" data-correct="false"> Una bicicletta connessa via Wi-Fi</label><br>
+</div>
+
+<div class="question">
+  <p><strong>13. Cosa significa 'identità digitale'?</strong></p>
+  <label><input type="radio" name="q12" data-correct="true"> L'insieme delle informazioni che ti rappresentano online</label><br>
+  <label><input type="radio" name="q12" data-correct="false"> Una carta d'identità fatta di cartone</label><br>
+  <label><input type="radio" name="q12" data-correct="false"> Un animale domestico virtuale che ti somiglia</label><br>
+</div>
+
+<div class="question">
+  <p><strong>14. Per condividere un file con molte persone, qual è una pratica sicura?</strong></p>
+  <label><input type="radio" name="q13" data-correct="true"> Caricarlo su una piattaforma cloud con link protetto</label><br>
+  <label><input type="radio" name="q13" data-correct="false"> Inviare il file allegato a un'unica email a tutti, senza considerare le dimensioni</label><br>
+  <label><input type="radio" name="q13" data-correct="false"> Fissare il file allo schermo con un magnete</label><br>
+</div>
+
+<div class="question">
+  <p><strong>15. In una chat di gruppo di lavoro, è consigliabile...</strong></p>
+  <label><input type="radio" name="q14" data-correct="true"> Rimanere sul tema e utilizzare un linguaggio professionale</label><br>
+  <label><input type="radio" name="q14" data-correct="false"> Inviare meme casuali durante una riunione importante</label><br>
+  <label><input type="radio" name="q14" data-correct="false"> Parlare con il computer come se fosse un cactus digitale</label><br>
+</div>
+
+<div class="question">
+  <p><strong>16. Quale tra questi strumenti è più adatto per una videoconferenza?</strong></p>
+  <label><input type="radio" name="q15" data-correct="true"> Zoom o Microsoft Teams</label><br>
+  <label><input type="radio" name="q15" data-correct="false"> Un lettore MP3</label><br>
+  <label><input type="radio" name="q15" data-correct="false"> Un tostapane intelligente</label><br>
+</div>
+
+<div class="question">
+  <p><strong>17. Cosa dovrebbe contenere una password per essere sicura?</strong></p>
+  <label><input type="radio" name="q16" data-correct="true"> Una combinazione di lettere maiuscole e minuscole, numeri e simboli</label><br>
+  <label><input type="radio" name="q16" data-correct="false"> Il nome del proprio animale domestico più il proprio compleanno</label><br>
+  <label><input type="radio" name="q16" data-correct="false"> Solo emoji di ciambelle digitali</label><br>
+</div>
+
+<div class="question">
+  <p><strong>18. Per esercitare la cittadinanza digitale, puoi...</strong></p>
+  <label><input type="radio" name="q17" data-correct="true"> Usare i servizi online della pubblica amministrazione</label><br>
+  <label><input type="radio" name="q17" data-correct="false"> Ignorare qualsiasi comunicazione ufficiale via email</label><br>
+  <label><input type="radio" name="q17" data-correct="false"> Parlare con il tuo router per ottenere un passaporto</label><br>
+</div>
+
+<div class="question">
+  <p><strong>19. Quando si invia un'email a più destinatari non collegati tra loro, è buona norma...</strong></p>
+  <label><input type="radio" name="q18" data-correct="true"> Utilizzare il campo BCC (Ccn) per proteggere la privacy</label><br>
+  <label><input type="radio" name="q18" data-correct="false"> Inserire tutti gli indirizzi nel campo A/To</label><br>
+  <label><input type="radio" name="q18" data-correct="false"> Scrivere gli indirizzi a penna sul monitor</label><br>
+</div>
+
+<div class="question">
+  <p><strong>20. Che cosa è una community online?</strong></p>
+  <label><input type="radio" name="q19" data-correct="true"> Un gruppo di persone che interagiscono su una piattaforma digitale condividendo interessi comuni</label><br>
+  <label><input type="radio" name="q19" data-correct="false"> Un computer con molte prese USB</label><br>
+  <label><input type="radio" name="q19" data-correct="false"> Una collezione di tasti rotti conservati in un forum</label><br>
+</div>
+
+<div class="question">
+  <p><strong>21. Che cos'è un software di elaborazione testi?</strong></p>
+  <label><input type="radio" name="q20" data-correct="true"> Un programma per creare e modificare documenti</label><br>
+  <label><input type="radio" name="q20" data-correct="false"> Un dispositivo per cucinare la pasta digitale</label><br>
+  <label><input type="radio" name="q20" data-correct="false"> Un tappeto magico per il mouse</label><br>
+</div>
+
+<div class="question">
+  <p><strong>22. Per copiare un testo da una fonte e incollarlo in un'altra, quali comandi vengono solitamente usati?</strong></p>
+  <label><input type="radio" name="q21" data-correct="true"> Ctrl+C per copiare, Ctrl+V per incollare</label><br>
+  <label><input type="radio" name="q21" data-correct="false"> Ctrl+Z per copiare, Ctrl+Y per incollare</label><br>
+  <label><input type="radio" name="q21" data-correct="false"> Ctrl+Alt+Canc per incollare tutto</label><br>
+</div>
+
+<div class="question">
+  <p><strong>23. In un foglio di calcolo, quale formula somma i valori da A1 a A10?</strong></p>
+  <label><input type="radio" name="q22" data-correct="true"> =SOMMA(A1:A10)</label><br>
+  <label><input type="radio" name="q22" data-correct="false"> =MEDIA(A1:A10)</label><br>
+  <label><input type="radio" name="q22" data-correct="false"> =TORTA(A1:A10)</label><br>
+</div>
+
+<div class="question">
+  <p><strong>24. Che cos'è un social network?</strong></p>
+  <label><input type="radio" name="q23" data-correct="true"> Una piattaforma online che permette di connettersi e condividere contenuti</label><br>
+  <label><input type="radio" name="q23" data-correct="false"> Un utensile da cucina per tagliare le reti</label><br>
+  <label><input type="radio" name="q23" data-correct="false"> Una rete per pescare commenti digitali</label><br>
+</div>
+
+<div class="question">
+  <p><strong>25. Per ridurre il rischio di perdere dati importanti, si dovrebbe...</strong></p>
+  <label><input type="radio" name="q24" data-correct="true"> Effettuare regolarmente backup dei propri file</label><br>
+  <label><input type="radio" name="q24" data-correct="false"> Conservare tutti i dati solo sulla scrivania</label><br>
+  <label><input type="radio" name="q24" data-correct="false"> Affidare i file al proprio cane digitale</label><br>
+</div>
+
+<div class="question">
+  <p><strong>26. Cosa indica il termine 'URL'?</strong></p>
+  <label><input type="radio" name="q25" data-correct="true"> L'indirizzo di una pagina web su Internet</label><br>
+  <label><input type="radio" name="q25" data-correct="false"> Un nuovo tipo di lampada da tavolo</label><br>
+  <label><input type="radio" name="q25" data-correct="false"> Una sigla per Unità di Resistenza al Laptop</label><br>
+</div>
+
+<div class="question">
+  <p><strong>27. Se devi partecipare a un corso online, quale connessione è preferibile?</strong></p>
+  <label><input type="radio" name="q26" data-correct="true"> Una connessione Internet stabile e veloce</label><br>
+  <label><input type="radio" name="q26" data-correct="false"> Una connessione instabile ma colorata</label><br>
+  <label><input type="radio" name="q26" data-correct="false"> Una canzone suonata dal modem</label><br>
+</div>
+
+<div class="question">
+  <p><strong>28. Quale dispositivo consente di convertire documenti cartacei in formato digitale?</strong></p>
+  <label><input type="radio" name="q27" data-correct="true"> Lo scanner</label><br>
+  <label><input type="radio" name="q27" data-correct="false"> Il tostapane</label><br>
+  <label><input type="radio" name="q27" data-correct="false"> La borraccia</label><br>
+</div>
+
+<div class="question">
+  <p><strong>29. In informatica, che cos'è un algoritmo?</strong></p>
+  <label><input type="radio" name="q28" data-correct="true"> Una sequenza di istruzioni per risolvere un problema</label><br>
+  <label><input type="radio" name="q28" data-correct="false"> Una canzone dedicata ai computer</label><br>
+  <label><input type="radio" name="q28" data-correct="false"> Un contenitore per il caffè digitale</label><br>
+</div>
+
+<div class="question">
+  <p><strong>30. Cos'è un hashtag?</strong></p>
+  <label><input type="radio" name="q29" data-correct="true"> Una parola o frase preceduta da # per categorizzare contenuti</label><br>
+  <label><input type="radio" name="q29" data-correct="false"> Un tipo di password per entrare nei siti</label><br>
+  <label><input type="radio" name="q29" data-correct="false"> Una fascia elastica per tenere insieme i cavi USB</label><br>
+</div>
+
+<div class="question">
+  <p><strong>31. Quale tra i seguenti è un esempio di malware?</strong></p>
+  <label><input type="radio" name="q30" data-correct="true"> Un virus informatico che può danneggiare o rubare dati</label><br>
+  <label><input type="radio" name="q30" data-correct="false"> Un'app di messaggistica come WhatsApp</label><br>
+  <label><input type="radio" name="q30" data-correct="false"> Una pianta virtuale che cresce sul desktop</label><br>
+</div>
+
+<div class="question">
+  <p><strong>32. Per proteggere la tua privacy online, è importante...</strong></p>
+  <label><input type="radio" name="q31" data-correct="true"> Leggere le informative sulla privacy e limitare la condivisione di dati personali</label><br>
+  <label><input type="radio" name="q31" data-correct="false"> Condividere il numero di carta di credito sui social per fare amicizia</label><br>
+  <label><input type="radio" name="q31" data-correct="false"> Nascondere il computer sotto il cuscino</label><br>
+</div>
+
+<div class="question">
+  <p><strong>33. Che cos'è l'autenticazione a due fattori (2FA)?</strong></p>
+  <label><input type="radio" name="q32" data-correct="true"> Un metodo di sicurezza che richiede due forme di verifica</label><br>
+  <label><input type="radio" name="q32" data-correct="false"> Una tastiera con il doppio dei tasti</label><br>
+  <label><input type="radio" name="q32" data-correct="false"> Un balletto digitale eseguito prima di accedere</label><br>
+</div>
+
+<div class="question">
+  <p><strong>34. Qual è una buona pratica per evitare il phishing?</strong></p>
+  <label><input type="radio" name="q33" data-correct="true"> Controllare attentamente mittente e link prima di cliccare</label><br>
+  <label><input type="radio" name="q33" data-correct="false"> Cliccare su qualsiasi link ricevuto via email</label><br>
+  <label><input type="radio" name="q33" data-correct="false"> Cantare una canzone al mouse per proteggerlo</label><br>
+</div>
+
+<div class="question">
+  <p><strong>35. Per proteggere la salute mentre si usa il computer, è consigliabile...</strong></p>
+  <label><input type="radio" name="q34" data-correct="true"> Fare pause regolari e mantenere una postura corretta</label><br>
+  <label><input type="radio" name="q34" data-correct="false"> Tenere il viso a 2 cm dallo schermo</label><br>
+  <label><input type="radio" name="q34" data-correct="false"> Indossare un casco da bici per navigare</label><br>
+</div>
+
+<div class="question">
+  <p><strong>36. Che cos'è la crittografia?</strong></p>
+  <label><input type="radio" name="q35" data-correct="true"> Una tecnica che rende i dati illeggibili a chi non dispone della chiave</label><br>
+  <label><input type="radio" name="q35" data-correct="false"> Una forma di danza antica</label><br>
+  <label><input type="radio" name="q35" data-correct="false"> Una lente d'ingrandimento per vedere i pixel</label><br>
+</div>
+
+<div class="question">
+  <p><strong>37. Quale azione riduce l'impatto ambientale dell'uso del digitale?</strong></p>
+  <label><input type="radio" name="q36" data-correct="true"> Spegnere dispositivi quando non in uso e ridurre stampe inutili</label><br>
+  <label><input type="radio" name="q36" data-correct="false"> Tenere il computer acceso giorno e notte per tenerlo in forma</label><br>
+  <label><input type="radio" name="q36" data-correct="false"> Piantare i microchip nel giardino per far crescere alberi USB</label><br>
+</div>
+
+<div class="question">
+  <p><strong>38. Cosa si intende per cyberbullismo?</strong></p>
+  <label><input type="radio" name="q37" data-correct="true"> Comportamenti aggressivi e molesti messi in atto tramite tecnologie digitali</label><br>
+  <label><input type="radio" name="q37" data-correct="false"> Un gioco online con tori digitali</label><br>
+  <label><input type="radio" name="q37" data-correct="false"> Un festival culinario a tema cibernetico</label><br>
+</div>
+
+<div class="question">
+  <p><strong>39. Quando un sito web utilizza HTTPS, questo significa che...</strong></p>
+  <label><input type="radio" name="q38" data-correct="true"> La comunicazione tra utente e sito è cifrata e più sicura</label><br>
+  <label><input type="radio" name="q38" data-correct="false"> Il sito è lento</label><br>
+  <label><input type="radio" name="q38" data-correct="false"> Il sito vende solo tè caldo</label><br>
+</div>
+
+<div class="question">
+  <p><strong>40. Perché è importante aggiornare regolarmente il sistema operativo e i programmi?</strong></p>
+  <label><input type="radio" name="q39" data-correct="true"> Gli aggiornamenti correggono vulnerabilità e migliorano la sicurezza</label><br>
+  <label><input type="radio" name="q39" data-correct="false"> Aggiornare solo quando il colore del desktop cambia</label><br>
+  <label><input type="radio" name="q39" data-correct="false"> Per cambiare l'odore del computer</label><br>
+</div>
+
+<div class="question">
+  <p><strong>41. Se il computer non si connette a Internet, cosa dovresti fare per primo?</strong></p>
+  <label><input type="radio" name="q40" data-correct="true"> Controllare i cavi, il router e le impostazioni di rete</label><br>
+  <label><input type="radio" name="q40" data-correct="false"> Spegnere la luce della stanza e aspettare</label><br>
+  <label><input type="radio" name="q40" data-correct="false"> Parlare dolcemente allo schermo per farlo calmare</label><br>
+</div>
+
+<div class="question">
+  <p><strong>42. Quando un programma non risponde, quale azione può aiutare a risolvere il problema?</strong></p>
+  <label><input type="radio" name="q41" data-correct="true"> Forzare la chiusura dell'applicazione e riavviare il programma</label><br>
+  <label><input type="radio" name="q41" data-correct="false"> Colpire il computer con un cuscino</label><br>
+  <label><input type="radio" name="q41" data-correct="false"> Offrirgli una tazza di caffè</label><br>
+</div>
+
+<div class="question">
+  <p><strong>43. Per personalizzare la dimensione del testo sullo schermo, puoi...</strong></p>
+  <label><input type="radio" name="q42" data-correct="true"> Regolare le impostazioni di zoom o accessibilità del sistema</label><br>
+  <label><input type="radio" name="q42" data-correct="false"> Avvicinare fisicamente il monitor al viso</label><br>
+  <label><input type="radio" name="q42" data-correct="false"> Mettere gli occhiali al computer</label><br>
+</div>
+
+<div class="question">
+  <p><strong>44. Se hai bisogno di automatizzare un'attività ripetitiva, potresti usare...</strong></p>
+  <label><input type="radio" name="q43" data-correct="true"> Un software di automazione o una macro</label><br>
+  <label><input type="radio" name="q43" data-correct="false"> Una clessidra</label><br>
+  <label><input type="radio" name="q43" data-correct="false"> Un cappello magico</label><br>
+</div>
+
+<div class="question">
+  <p><strong>45. Che cos'è un backup?</strong></p>
+  <label><input type="radio" name="q44" data-correct="true"> Una copia di sicurezza dei dati per poterli recuperare in caso di perdita</label><br>
+  <label><input type="radio" name="q44" data-correct="false"> Un programma per aumentare il volume degli altoparlanti</label><br>
+  <label><input type="radio" name="q44" data-correct="false"> Un ballo di gruppo per i file digitali</label><br>
+</div>
+
+<div class="question">
+  <p><strong>46. Come si chiama il processo di identificare un problema e trovare la tecnologia adatta per risolverlo?</strong></p>
+  <label><input type="radio" name="q45" data-correct="true"> Problem solving</label><br>
+  <label><input type="radio" name="q45" data-correct="false"> Napping</label><br>
+  <label><input type="radio" name="q45" data-correct="false"> Cucina creativa digitale</label><br>
+</div>
+
+<div class="question">
+  <p><strong>47. Per utilizzare creativamente la tecnologia, è utile...</strong></p>
+  <label><input type="radio" name="q46" data-correct="true"> Sperimentare nuovi strumenti e combinare diverse funzionalità</label><br>
+  <label><input type="radio" name="q46" data-correct="false"> Usare sempre lo stesso programma per ogni compito</label><br>
+  <label><input type="radio" name="q46" data-correct="false"> Parlare con il proprio mouse per farsi ispirare</label><br>
+</div>
+
+<div class="question">
+  <p><strong>48. Se non sai come svolgere un'operazione sul computer, puoi...</strong></p>
+  <label><input type="radio" name="q47" data-correct="true"> Cercare tutorial e guide online da fonti affidabili</label><br>
+  <label><input type="radio" name="q47" data-correct="false"> Premere tasti a caso fino a trovare la soluzione</label><br>
+  <label><input type="radio" name="q47" data-correct="false"> Chiedere aiuto al telecomando della TV</label><br>
+</div>
+
+<div class="question">
+  <p><strong>49. Quando un dispositivo mostra un messaggio di errore, è utile...</strong></p>
+  <label><input type="radio" name="q48" data-correct="true"> Leggere il messaggio e cercare la causa o il codice dell'errore</label><br>
+  <label><input type="radio" name="q48" data-correct="false"> Ignorare il messaggio e continuare a usarlo</label><br>
+  <label><input type="radio" name="q48" data-correct="false"> Metterlo sotto il cuscino sperando che sparisca</label><br>
+</div>
+
+<div class="question">
+  <p><strong>50. Per mantenere aggiornate le proprie competenze digitali, è importante...</strong></p>
+  <label><input type="radio" name="q49" data-correct="true"> Formarsi continuamente e aiutare anche gli altri a imparare</label><br>
+  <label><input type="radio" name="q49" data-correct="false"> Evitare qualsiasi novità per non stressarsi</label><br>
+  <label><input type="radio" name="q49" data-correct="false"> Imparare a parlare con i robot in lingua aliena</label><br>
+</div>
+
+        </form>
+        <button type="button" class="submit-btn" onclick="calcolaPunteggio()">Calcola punteggio</button>
+        <div id="result" class="result"></div>
+    </main>
+
+    <script>
+        // Elenco delle domande e risposte
+        const questions = [
+            {
+                text: "Quando cerchi informazioni online, quale tra le seguenti pratiche aiuta a valutare l'affidabilità di una fonte?",
+                options: [
+                    { text: "Verificare l'autore e confrontare le informazioni con altre fonti", correct: true },
+                    { text: "Scegliere sempre il primo risultato senza controlli", correct: false },
+                    { text: "Consultare l'oroscopo del computer per decidere", correct: false }
+                ]
+            },
+            {
+                text: "Per archiviare e recuperare documenti sul computer, è utile...",
+                options: [
+                    { text: "Organizzare i file in cartelle con nomi chiari", correct: true },
+                    { text: "Eliminare i documenti dopo averli letti", correct: false },
+                    { text: "Tenere i file in un cassetto fisico accanto al monitor", correct: false }
+                ]
+            },
+            {
+                text: "Cosa significa 'filtrare' i risultati di una ricerca online?",
+                options: [
+                    { text: "Applicare criteri per restringere i risultati", correct: true },
+                    { text: "Spegnere il computer per raffreddarlo", correct: false },
+                    { text: "Misurare la velocità del Wi-Fi con un colino da cucina", correct: false }
+                ]
+            },
+            {
+                text: "Per riconoscere una fake news, è consigliabile...",
+                options: [
+                    { text: "Verificare la fonte, la data e confrontare con più fonti", correct: true },
+                    { text: "Condividere immediatamente se il titolo è sorprendente", correct: false },
+                    { text: "Controllare se la pagina cambia colore a seconda dell'umore", correct: false }
+                ]
+            },
+            {
+                text: "Quando memorizzi dati sensibili su un servizio online, cosa dovresti fare?",
+                options: [
+                    { text: "Impostare una password forte e attivare l'autenticazione a due fattori", correct: true },
+                    { text: "Usare la stessa password semplice per tutto", correct: false },
+                    { text: "Scrivere la password sullo schermo con un pennarello digitale", correct: false }
+                ]
+            },
+            {
+                text: "Che cos'è un motore di ricerca?",
+                options: [
+                    { text: "Un servizio che permette di trovare informazioni su Internet", correct: true },
+                    { text: "Un dispositivo che stampa i biglietti del treno", correct: false },
+                    { text: "Un piccolo animale virtuale che vive nella tastiera", correct: false }
+                ]
+            },
+            {
+                text: "Perché è importante salvare regolarmente il proprio lavoro mentre si scrive un documento?",
+                options: [
+                    { text: "Per evitare di perdere dati in caso di errore o interruzione", correct: true },
+                    { text: "Perché il computer potrebbe diventare geloso", correct: false },
+                    { text: "Per far crescere le piante sullo schermo", correct: false }
+                ]
+            },
+            {
+                text: "Cosa indica l'estensione di un file (es. .doc, .jpg)?",
+                options: [
+                    { text: "Il tipo di contenuto e il programma adatto per aprirlo", correct: true },
+                    { text: "La dimensione fisica del monitor", correct: false },
+                    { text: "La durata di vita del computer in anni digitali", correct: false }
+                ]
+            },
+            {
+                text: "Qual è l'utilità di un 'segnalibro' nel browser?",
+                options: [
+                    { text: "Salvare e accedere rapidamente a un sito web preferito", correct: true },
+                    { text: "Cambiare il colore della tastiera", correct: false },
+                    { text: "Tenere fermo il monitor come un fermacarte", correct: false }
+                ]
+            },
+            {
+                text: "Che cos'è il cloud computing?",
+                options: [
+                    { text: "Un servizio che permette di archiviare e accedere ai dati tramite Internet", correct: true },
+                    { text: "Un programma per creare nuvole sullo schermo", correct: false },
+                    { text: "Un maglione per tenere al caldo i bit", correct: false }
+                ]
+            },
+            {
+                text: "Qual è un esempio di netiquette?",
+                options: [
+                    { text: "Rispondere con cortesia e rispetto nei messaggi online", correct: true },
+                    { text: "Scrivere tutto in maiuscolo per essere più visibile", correct: false },
+                    { text: "Inviare una cartolina cartacea al tuo mouse", correct: false }
+                ]
+            },
+            {
+                text: "Per collaborare online su un documento con altre persone, quale strumento è più adatto?",
+                options: [
+                    { text: "Un editor di documenti condiviso (es. Google Docs)", correct: true },
+                    { text: "Una lavagna magnetica in cucina", correct: false },
+                    { text: "Una bicicletta connessa via Wi-Fi", correct: false }
+                ]
+            },
+            {
+                text: "Cosa significa 'identità digitale'?",
+                options: [
+                    { text: "L'insieme delle informazioni che ti rappresentano online", correct: true },
+                    { text: "Una carta d'identità fatta di cartone", correct: false },
+                    { text: "Un animale domestico virtuale che ti somiglia", correct: false }
+                ]
+            },
+            {
+                text: "Per condividere un file con molte persone, qual è una pratica sicura?",
+                options: [
+                    { text: "Caricarlo su una piattaforma cloud con link protetto", correct: true },
+                    { text: "Inviare il file allegato a un'unica email a tutti, senza considerare le dimensioni", correct: false },
+                    { text: "Fissare il file allo schermo con un magnete", correct: false }
+                ]
+            },
+            {
+                text: "In una chat di gruppo di lavoro, è consigliabile...",
+                options: [
+                    { text: "Rimanere sul tema e utilizzare un linguaggio professionale", correct: true },
+                    { text: "Inviare meme casuali durante una riunione importante", correct: false },
+                    { text: "Parlare con il computer come se fosse un cactus digitale", correct: false }
+                ]
+            },
+            {
+                text: "Quale tra questi strumenti è più adatto per una videoconferenza?",
+                options: [
+                    { text: "Zoom o Microsoft Teams", correct: true },
+                    { text: "Un lettore MP3", correct: false },
+                    { text: "Un tostapane intelligente", correct: false }
+                ]
+            },
+            {
+                text: "Cosa dovrebbe contenere una password per essere sicura?",
+                options: [
+                    { text: "Una combinazione di lettere maiuscole e minuscole, numeri e simboli", correct: true },
+                    { text: "Il nome del proprio animale domestico più il proprio compleanno", correct: false },
+                    { text: "Solo emoji di ciambelle digitali", correct: false }
+                ]
+            },
+            {
+                text: "Per esercitare la cittadinanza digitale, puoi...",
+                options: [
+                    { text: "Usare i servizi online della pubblica amministrazione", correct: true },
+                    { text: "Ignorare qualsiasi comunicazione ufficiale via email", correct: false },
+                    { text: "Parlare con il tuo router per ottenere un passaporto", correct: false }
+                ]
+            },
+            {
+                text: "Quando si invia un'email a più destinatari non collegati tra loro, è buona norma...",
+                options: [
+                    { text: "Utilizzare il campo BCC (Ccn) per proteggere la privacy", correct: true },
+                    { text: "Inserire tutti gli indirizzi nel campo A/To", correct: false },
+                    { text: "Scrivere gli indirizzi a penna sul monitor", correct: false }
+                ]
+            },
+            {
+                text: "Che cosa è una community online?",
+                options: [
+                    { text: "Un gruppo di persone che interagiscono su una piattaforma digitale condividendo interessi comuni", correct: true },
+                    { text: "Un computer con molte prese USB", correct: false },
+                    { text: "Una collezione di tasti rotti conservati in un forum", correct: false }
+                ]
+            },
+            {
+                text: "Che cos'è un software di elaborazione testi?",
+                options: [
+                    { text: "Un programma per creare e modificare documenti", correct: true },
+                    { text: "Un apparecchio per tostare il pane", correct: false },
+                    { text: "Un tappeto volante per file digitali", correct: false }
+                ]
+            },
+            {
+                text: "Quando utilizzi materiale trovato online per creare un nuovo contenuto, è importante...",
+                options: [
+                    { text: "Rispettare il copyright e citare le fonti", correct: true },
+                    { text: "Copiare e incollare senza attribuzione", correct: false },
+                    { text: "Chiedere il permesso al computer per ogni immagine", correct: false }
+                ]
+            },
+            {
+                text: "Cosa significa 'programmare' un computer?",
+                options: [
+                    { text: "Scrivere istruzioni che il computer può seguire per eseguire un compito", correct: true },
+                    { text: "Scegliere i programmi TV da guardare sul PC", correct: false },
+                    { text: "Dare nomi propri a ogni bit di memoria", correct: false }
+                ]
+            },
+            {
+                text: "Quale formato è più adatto per un'immagine ad alta risoluzione?",
+                options: [
+                    { text: "PNG o TIFF", correct: true },
+                    { text: ".txt", correct: false },
+                    { text: ".pizza", correct: false }
+                ]
+            },
+            {
+                text: "Per creare una presentazione efficace, è utile...",
+                options: [
+                    { text: "Organizzare le informazioni in slide chiare e usare immagini pertinenti", correct: true },
+                    { text: "Inserire quante più animazioni possibili per stupire", correct: false },
+                    { text: "Aggiungere ricette di cucina tra le diapositive", correct: false }
+                ]
+            },
+            {
+                text: "Quando si modifica un file PDF senza programma dedicato, potresti...",
+                options: [
+                    { text: "Convertirlo in formato Word e poi riconvertirlo", correct: true },
+                    { text: "Stampare il file e modificarlo con una penna digitale invisibile", correct: false },
+                    { text: "Sussurrare al documento affinché cambi da solo", correct: false }
+                ]
+            },
+            {
+                text: "Cosa significa 'licenza Creative Commons'?",
+                options: [
+                    { text: "Un tipo di licenza che permette di condividere opere con determinate condizioni", correct: true },
+                    { text: "Un permesso per creare robot da cucina creativi", correct: false },
+                    { text: "Un pass per entrare in un club segreto di chi crea foto di nuvole", correct: false }
+                ]
+            },
+            {
+                text: "Per pubblicare un articolo su un blog, è importante...",
+                options: [
+                    { text: "Strutturare il testo con titoli e paragrafi e verificare l'ortografia", correct: true },
+                    { text: "Scrivere tutto senza punteggiatura per risparmiare tempo", correct: false },
+                    { text: "Utilizzare solo font invisibili per sorprendere i lettori", correct: false }
+                ]
+            },
+            {
+                text: "Quale tra i seguenti linguaggi è utilizzato per creare pagine web?",
+                options: [
+                    { text: "HTML", correct: true },
+                    { text: "SQL", correct: false },
+                    { text: "Lingua dei delfini digitali", correct: false }
+                ]
+            },
+            {
+                text: "Cosa rappresenta un 'hashtag' sui social media?",
+                options: [
+                    { text: "Una parola o frase preceduta da # per categorizzare contenuti", correct: true },
+                    { text: "Un tipo di password per entrare nei siti", correct: false },
+                    { text: "Una fascia elastica per tenere insieme i cavi USB", correct: false }
+                ]
+            },
+            {
+                text: "Quale tra i seguenti è un esempio di malware?",
+                options: [
+                    { text: "Un virus informatico che può danneggiare o rubare dati", correct: true },
+                    { text: "Un'app di messaggistica come WhatsApp", correct: false },
+                    { text: "Una pianta virtuale che cresce sul desktop", correct: false }
+                ]
+            },
+            {
+                text: "Per proteggere la tua privacy online, è importante...",
+                options: [
+                    { text: "Leggere le informative sulla privacy e limitare la condivisione di dati personali", correct: true },
+                    { text: "Condividere il numero di carta di credito sui social per fare amicizia", correct: false },
+                    { text: "Nascondere il computer sotto il cuscino", correct: false }
+                ]
+            },
+            {
+                text: "Che cos'è l'autenticazione a due fattori (2FA)?",
+                options: [
+                    { text: "Un metodo di sicurezza che richiede due forme di verifica", correct: true },
+                    { text: "Una tastiera con il doppio dei tasti", correct: false },
+                    { text: "Un balletto digitale eseguito prima di accedere", correct: false }
+                ]
+            },
+            {
+                text: "Qual è una buona pratica per evitare il phishing?",
+                options: [
+                    { text: "Controllare attentamente mittente e link prima di cliccare", correct: true },
+                    { text: "Cliccare su qualsiasi link ricevuto via email", correct: false },
+                    { text: "Cantare una canzone al mouse per proteggerlo", correct: false }
+                ]
+            },
+            {
+                text: "Per proteggere la salute mentre si usa il computer, è consigliabile...",
+                options: [
+                    { text: "Fare pause regolari e mantenere una postura corretta", correct: true },
+                    { text: "Tenere il viso a 2 cm dallo schermo", correct: false },
+                    { text: "Indossare un casco da bici per navigare", correct: false }
+                ]
+            },
+            {
+                text: "Che cos'è la crittografia?",
+                options: [
+                    { text: "Una tecnica che rende i dati illeggibili a chi non dispone della chiave", correct: true },
+                    { text: "Una forma di danza antica", correct: false },
+                    { text: "Una lente d'ingrandimento per vedere i pixel", correct: false }
+                ]
+            },
+            {
+                text: "Quale azione riduce l'impatto ambientale dell'uso del digitale?",
+                options: [
+                    { text: "Spegnere dispositivi quando non in uso e ridurre stampe inutili", correct: true },
+                    { text: "Tenere il computer acceso giorno e notte per tenerlo in forma", correct: false },
+                    { text: "Piantare i microchip nel giardino per far crescere alberi USB", correct: false }
+                ]
+            },
+            {
+                text: "Cosa si intende per cyberbullismo?",
+                options: [
+                    { text: "Comportamenti aggressivi e molesti messi in atto tramite tecnologie digitali", correct: true },
+                    { text: "Un gioco online con tori digitali", correct: false },
+                    { text: "Un festival culinario a tema cibernetico", correct: false }
+                ]
+            },
+            {
+                text: "Quando un sito web utilizza HTTPS, questo significa che...",
+                options: [
+                    { text: "La comunicazione tra utente e sito è cifrata e più sicura", correct: true },
+                    { text: "Il sito è lento", correct: false },
+                    { text: "Il sito vende solo tè caldo", correct: false }
+                ]
+            },
+            {
+                text: "Perché è importante aggiornare regolarmente il sistema operativo e i programmi?",
+                options: [
+                    { text: "Gli aggiornamenti correggono vulnerabilità e migliorano la sicurezza", correct: true },
+                    { text: "Aggiornare solo quando il colore del desktop cambia", correct: false },
+                    { text: "Per cambiare l'odore del computer", correct: false }
+                ]
+            },
+            {
+                text: "Se il computer non si connette a Internet, cosa dovresti fare per primo?",
+                options: [
+                    { text: "Controllare i cavi, il router e le impostazioni di rete", correct: true },
+                    { text: "Spegnere la luce della stanza e aspettare", correct: false },
+                    { text: "Parlare dolcemente allo schermo per farlo calmare", correct: false }
+                ]
+            },
+            {
+                text: "Quando un programma non risponde, quale azione può aiutare a risolvere il problema?",
+                options: [
+                    { text: "Forzare la chiusura dell'applicazione e riavviare il programma", correct: true },
+                    { text: "Colpire il computer con un cuscino", correct: false },
+                    { text: "Offrirgli una tazza di caffè", correct: false }
+                ]
+            },
+            {
+                text: "Per personalizzare la dimensione del testo sullo schermo, puoi...",
+                options: [
+                    { text: "Regolare le impostazioni di zoom o accessibilità del sistema", correct: true },
+                    { text: "Avvicinare fisicamente il monitor al viso", correct: false },
+                    { text: "Mettere gli occhiali al computer", correct: false }
+                ]
+            },
+            {
+                text: "Se hai bisogno di automatizzare un'attività ripetitiva, potresti usare...",
+                options: [
+                    { text: "Un software di automazione o una macro", correct: true },
+                    { text: "Una clessidra", correct: false },
+                    { text: "Un cappello magico", correct: false }
+                ]
+            },
+            {
+                text: "Che cos'è un backup?",
+                options: [
+                    { text: "Una copia di sicurezza dei dati per poterli recuperare in caso di perdita", correct: true },
+                    { text: "Un programma per aumentare il volume degli altoparlanti", correct: false },
+                    { text: "Un ballo di gruppo per i file digitali", correct: false }
+                ]
+            },
+            {
+                text: "Come si chiama il processo di identificare un problema e trovare la tecnologia adatta per risolverlo?",
+                options: [
+                    { text: "Problem solving", correct: true },
+                    { text: "Napping", correct: false },
+                    { text: "Cucina creativa digitale", correct: false }
+                ]
+            },
+            {
+                text: "Per utilizzare creativamente la tecnologia, è utile...",
+                options: [
+                    { text: "Sperimentare nuovi strumenti e combinare diverse funzionalità", correct: true },
+                    { text: "Usare sempre lo stesso programma per ogni compito", correct: false },
+                    { text: "Parlare con il proprio mouse per farsi ispirare", correct: false }
+                ]
+            },
+            {
+                text: "Se non sai come svolgere un'operazione sul computer, puoi...",
+                options: [
+                    { text: "Cercare tutorial e guide online da fonti affidabili", correct: true },
+                    { text: "Premere tasti a caso fino a trovare la soluzione", correct: false },
+                    { text: "Chiedere aiuto al telecomando della TV", correct: false }
+                ]
+            },
+            {
+                text: "Quando un dispositivo mostra un messaggio di errore, è utile...",
+                options: [
+                    { text: "Leggere il messaggio e cercare la causa o il codice dell'errore", correct: true },
+                    { text: "Ignorare il messaggio e continuare a usarlo", correct: false },
+                    { text: "Metterlo sotto il cuscino sperando che sparisca", correct: false }
+                ]
+            },
+            {
+                text: "Per mantenere aggiornate le proprie competenze digitali, è importante...",
+                options: [
+                    { text: "Formarsi continuamente e aiutare anche gli altri a imparare", correct: true },
+                    { text: "Evitare qualsiasi novità per non stressarsi", correct: false },
+                    { text: "Imparare a parlare con i robot in lingua aliena", correct: false }
+                ]
+            }
+        ];
+
+        /**
+         * Genera il markup delle domande all'interno del form.
+         */
+        function renderQuestions() {
+            const form = document.getElementById('quizForm');
+            questions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+
+                const p = document.createElement('p');
+                p.textContent = (index + 1) + '. ' + q.text;
+                questionDiv.appendChild(p);
+
+                q.options.forEach((opt, optIndex) => {
+                    const label = document.createElement('label');
+                    const input = document.createElement('input');
+                    input.type = 'radio';
+                    input.name = 'q' + index;
+                    input.value = optIndex;
+                    input.dataset.correct = opt.correct;
+                    label.appendChild(input);
+                    label.appendChild(document.createTextNode(' ' + opt.text));
+                    questionDiv.appendChild(label);
+                });
+                form.appendChild(questionDiv);
+            });
+        }
+
+        /**
+         * Calcola il punteggio verificando le risposte selezionate.
+         */
+        function calcolaPunteggio() {
+            let score = 0;
+            // Il numero totale di domande è determinato dal numero di elementi con classe "question"
+            const total = document.querySelectorAll('.question').length;
+            // Controlla tutte le opzioni selezionate e incrementa il punteggio per ogni risposta corretta
+            const selectedRadios = document.querySelectorAll('input[type="radio"]:checked');
+            selectedRadios.forEach((radio) => {
+                if (radio.dataset.correct === 'true') {
+                    score++;
+                }
+            });
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = `Il tuo punteggio è ${score} su ${total}.`;
+        }
+
+        // Inizializza il quiz. La generazione automatica è disattivata perché le domande sono già incluse nel markup.
+        // renderQuestions();
+    </script>
+</body>
+</html>
