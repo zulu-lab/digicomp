@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esercitazione – Ricerca online e Word</title>
+  <style>
+    :root{
+      --text:#111;
+      --muted:#555;
+      --border:#d9d9d9;
+      --bg:#f6f7f9;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.5;
+    }
+    .page{
+      max-width:900px;
+      margin:32px auto;
+      background:var(--card);
+      padding:40px 46px;
+      box-shadow:0 2px 10px rgba(0,0,0,.06);
+      border:1px solid var(--border);
+    }
+    h1{
+      margin:0 0 10px 0;
+      font-size:30px;
+      line-height:1.2;
+      text-transform:uppercase;
+    }
+    h2{
+      margin:28px 0 10px 0;
+      font-size:20px;
+      border-bottom:2px solid var(--border);
+      padding-bottom:6px;
+    }
+    h3{
+      margin:0 0 8px 0;
+      font-size:18px;
+    }
+    p{margin:8px 0}
+    ul, ol{margin:10px 0 10px 24px}
+    li{margin:6px 0}
+    .subtitle{
+      color:var(--muted);
+      margin-bottom:22px;
+      font-size:15px;
+    }
+    .phase{
+      border:1px solid var(--border);
+      padding:16px 18px;
+      margin:16px 0;
+      border-radius:8px;
+      background:#fff;
+    }
+    .box{
+      border:1px solid var(--border);
+      padding:14px 16px;
+      margin-top:12px;
+      background:#fcfcfc;
+      border-radius:8px;
+    }
+    .kbd{
+      display:inline-block;
+      padding:2px 8px;
+      border:1px solid #bbb;
+      border-bottom-width:2px;
+      border-radius:6px;
+      background:#fafafa;
+      font-size:14px;
+      font-family: Arial, Helvetica, sans-serif;
+      white-space:nowrap;
+    }
+    .printbar{
+      max-width:900px;
+      margin:24px auto 0 auto;
+      display:flex;
+      justify-content:flex-end;
+      gap:10px;
+    }
+    button{
+      padding:10px 14px;
+      border:1px solid #bbb;
+      background:white;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:14px;
+    }
+    button:hover{background:#f2f2f2}
+    @media print{
+      body{background:white}
+      .printbar{display:none}
+      .page{
+        margin:0;
+        max-width:none;
+        box-shadow:none;
+        border:none;
+        padding:18mm 14mm;
+      }
+      .phase, .box{
+        break-inside:avoid;
+        page-break-inside:avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="printbar">
+    <button onclick="window.print()">Stampa / Salva in PDF</button>
+  </div>
+
+  <main class="page">
+    <h1>Esercitazione – Ricerca online e creazione documento Word</h1>
+    <div class="subtitle">Scheda operativa pronta stampa</div>
+
+    <h2>Obiettivo</h2>
+    <p>Saper cercare informazioni su Internet, selezionarle e creare un documento Word ordinato e leggibile.</p>
+
+    <h2>Fasi operative</h2>
+
+    <section class="phase">
+      <h3>Fase 1 – Avvio e ricerca</h3>
+      <ol>
+        <li>Apri il browser: Chrome oppure Edge.</li>
+        <li>Vai su Google.</li>
+        <li>Cerca questa frase: <strong>Cos’è lo SPID e a cosa serve</strong>.</li>
+        <li>Apri almeno <strong>2 siti diversi</strong>.</li>
+      </ol>
+    </section>
+
+    <section class="phase">
+      <h3>Fase 2 – Lettura e selezione</h3>
+      <ol>
+        <li>Leggi con calma i contenuti trovati.</li>
+        <li>Individua queste 3 informazioni:
+          <ul>
+            <li>cos’è lo SPID;</li>
+            <li>a cosa serve;</li>
+            <li>come si ottiene.</li>
+          </ul>
+        </li>
+        <li>Copia solo le parti utili in un foglio temporaneo, ad esempio Blocco Note.</li>
+      </ol>
+    </section>
+
+    <section class="phase">
+      <h3>Fase 3 – Apertura Word e salvataggio</h3>
+      <ol>
+        <li>Apri Microsoft Word.</li>
+        <li>Crea un nuovo documento vuoto.</li>
+        <li>Salva subito il file con questo nome: <strong>SPID_TuoNome.docx</strong>.</li>
+        <li>Scegli come posizione il <strong>Desktop</strong>.</li>
+      </ol>
+      <div class="box">
+        <strong>Comandi utili:</strong><br>
+        <span class="kbd">Ctrl</span> + <span class="kbd">B</span> = Salva<br>
+        <span class="kbd">Ctrl</span> + <span class="kbd">T</span> = Seleziona tutto
+      </div>
+    </section>
+
+    <section class="phase">
+      <h3>Fase 4 – Scrittura del documento</h3>
+      <ol>
+        <li>Scrivi il titolo: <strong>LO SPID</strong>.</li>
+        <li>Sotto il titolo scrivi 3 paragrafi:
+          <ul>
+            <li>Cos’è</li>
+            <li>A cosa serve</li>
+            <li>Come si ottiene</li>
+          </ul>
+        </li>
+        <li>Non incollare direttamente il testo trovato online.</li>
+        <li>Riscrivi le informazioni con parole tue.</li>
+      </ol>
+    </section>
+
+    <section class="phase">
+      <h3>Fase 5 – Formattazione</h3>
+      <ol>
+        <li>Seleziona il titolo e mettilo in <strong>grassetto</strong>.</li>
+        <li>Imposta il titolo con dimensione <strong>16</strong>.</li>
+        <li>Imposta il testo con dimensione <strong>11 oppure 12</strong>.</li>
+        <li>Applica al testo l’allineamento <strong>giustificato</strong>.</li>
+        <li>Trasforma una parte del contenuto in <strong>elenco puntato</strong>.</li>
+        <li>Usa come elenco puntato la sezione: <strong>Vantaggi dello SPID</strong>.</li>
+      </ol>
+      <div class="box">
+        <strong>Shortcut utile:</strong><br>
+        <span class="kbd">Ctrl</span> + <span class="kbd">G</span> = Grassetto
+      </div>
+    </section>
+
+    <section class="phase">
+      <h3>Fase 6 – Inserimento immagine</h3>
+      <ol>
+        <li>Vai su Google Immagini.</li>
+        <li>Cerca: <strong>SPID accesso schema</strong>.</li>
+        <li>Scegli un’immagine chiara e leggibile.</li>
+        <li>Copia l’immagine.</li>
+        <li>Incollala nel documento Word.</li>
+        <li>Ridimensionala senza deformarla.</li>
+      </ol>
+    </section>
+
+    <section class="phase">
+      <h3>Fase 7 – Controllo finale</h3>
+      <ol>
+        <li>Rileggi tutto il documento.</li>
+        <li>Controlla:
+          <ul>
+            <li>errori di scrittura;</li>
+            <li>spazi doppi;</li>
+            <li>ordine del contenuto;</li>
+            <li>presenza del titolo, dei paragrafi, dell’elenco e dell’immagine.</li>
+          </ul>
+        </li>
+        <li>Salva di nuovo il file.</li>
+      </ol>
+    </section>
+
+    <h2>Consegna finale</h2>
+    <p>Lo studente deve consegnare un file Word che contenga:</p>
+    <ul>
+      <li>titolo formattato;</li>
+      <li>3 paragrafi scritti correttamente;</li>
+      <li>1 elenco puntato;</li>
+      <li>1 immagine inserita;</li>
+      <li>testo rielaborato, non copiato integralmente.</li>
+    </ul>
+
+    <div class="box">
+      <strong>Verifica del docente</strong>
+      <ul>
+        <li>La ricerca è stata eseguita su almeno 2 siti.</li>
+        <li>Il testo è comprensibile e ordinato.</li>
+        <li>La formattazione base di Word è presente.</li>
+        <li>L’immagine è stata inserita correttamente.</li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
